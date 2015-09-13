@@ -6,14 +6,16 @@ angular.module('Brasserie').directive('beer', function(BrasserieService){
 		}, 
 		template: '<div class="col-md-4 panel panel-default">' +
 					'<div class="panel-heading">' +
-						'<span ng-class="{\'glyphicon glyphicon-heart\': {{beer.note | NoteFilter}} }"></span>{{beer.name}}</div>' +
+						'<span ng-class="{\'glyphicon glyphicon-heart\': {{vm.beer.note | NoteFilter}} }"></span>{{vm.beer.name}}</div>' +
 						'<div class="panel-body">' +
-							'{{beer.description}}' +
+							'{{vm.beer.description}}' +
 						'</div>' +
 						'<button ng-click="selectBeer()" class="btn btn-primary">Give me a pinte !</button>' +
 					'</div>',
-		link: function($scope){
-			$scope.selectBeer = function(){
+		controllerAs: 'vm',
+		bindToController: true,
+		controller: function(){
+			this.selectBeer = function(){
 				BrasserieService.getOnePinte($scope.beer);
 			};
 		}

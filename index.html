@@ -19,8 +19,8 @@
 	</head>
 	<body ng-app="Brasserie">
 		<header><h1>Brasserie Zenika !!</h1></header>
-		<main ng-controller="BrasserieCtrl">
-				<beer ng-repeat="b in beers" beer="b" ></beer>
+		<main ng-controller="BrasserieCtrl as vm">
+				<beer ng-repeat="b in vm.beers" beer="b" ></beer>
 		</main>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 		

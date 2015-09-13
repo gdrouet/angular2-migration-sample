@@ -1,3 +1,3 @@
-angular.module('Brasserie').controller('BrasserieCtrl', function($scope, BrasserieService){
-	$scope.beers = BrasserieService.getBeers();
+angular.module('Brasserie').controller('BrasserieCtrl', function(BrasserieService){
+	this.beers = BrasserieService.getBeers();
 });
