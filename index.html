@@ -16,20 +16,24 @@
 				margin: auto 2%;
 			}
 		</style>
+		
+		<script src="https://github.jspm.io/jmcriffey/bower-traceur-runtime@0.0.91/traceur-runtime.js"></script>
+    	<script src="http://cdnjs.cloudflare.com/ajax/libs/systemjs/0.18.4/system.src.js"></script>
+		<script>
+			 System.config({
+            	defaultJSExtensions: true
+        	});
+		</script>
+    	<script src="https://code.angularjs.org/2.0.0-alpha.37/angular2.dev.js"></script>
 	</head>
-	<body ng-app="Brasserie">
+	<body>
 		<header><h1>Brasserie Zenika !!</h1></header>
 		
 		<app></app>
 		
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-		
-		
-		<script type="text/javascript" src="components/app.js"></script>
-		<script type="text/javascript" src="components/BrasserieService.js"></script>
-		<script type="text/javascript" src="components/AppComponent.js"></script>
-		<script type="text/javascript" src="components/Beer.js"></script>
-		<script type="text/javascript" src="components/NoteFilter.js"></script>
+		<script>
+			System.import('AppComponent');
+		</script>
 	</body>
 </html>
 	
